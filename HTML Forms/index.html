@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ระบบจัดการผู้ติดต่อ</h1>
+        
+        <form id="contactForm">
+            <div class="input-group">
+                <label for="name">ชื่อ:</label>
+                <input type="text" id="name" name="name" placeholder="กรอกชื่อของคุณ" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="phone">เบอร์โทรศัพท์:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]+" placeholder="กรอกเบอร์โทรศัพท์" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="subject">หัวข้อที่ต้องการติดต่อ:</label>
+                <select id="subject" name="subject">
+                    <option value="general">สอบถามทั่วไป</option>
+                    <option value="support">ขอความช่วยเหลือ</option>
+                    <option value="feedback">ข้อเสนอแนะ</option>
+                    <option value="other">อื่นๆ</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="message">ข้อความ:</label>
+                <textarea id="message" name="message" rows="5" placeholder="พิมพ์ข้อความของคุณที่นี่..."></textarea>
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" class="submit-btn">ส่งข้อมูล</button>
+                <button type="reset" class="reset-btn">ล้างข้อมูล</button>
+            </div>
+        </form>
+
+        <h2>📋 รายชื่อผู้ติดต่อ</h2>
+        <ul id="contactList" class="contact-list"></ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
